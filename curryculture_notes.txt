@@ -1,0 +1,106 @@
+The Growth of Popularity of Indian Curry in Japan
+
+Indian curry first begain gaining popularity in Tokyo in the late 80s. At this time, an affinity and interest for French, Italian, American, and Chinese food was already established. "Ethnic" food, especially cusisines with an emphasis on the use of spices , began to grow in popularity. Now, an interest in and affinity for South Asian curries is commonplace, and Indian curry can be found in nearly every neighborhood in the city.
+
+How this growing interest in Indian curry developed has not been studied to my knowledge. I have two hypotheses: first, Indian curry is often served in a "lunch set" format quite similar to traditional Japanese curry rice, so its familiar format made it approachable. Additionally, many Japanese are likely aware that Japanese curry rice is of Indian origins via Great Britain, adding more to the cuisine's familiarity. Second, travel to South and Southeast Asia by Japanese became more common and popular in the 1980s, bringing with it more firsthand experience with food and flavors from these places.
+
+https://scholar.google.co.jp/scholar?hl=en&q=インド++異国料理&btnG=&as_sdt=1%2C5&as_sdtp=
+
+*** Indian restaurants are not concentrated in one area
+
+*** Migration of south asians to Tokyo
+
+*** Increase in Japanese economic investment in south and southeast asia
+---
+
+*** Is restaurant size correlated with review score?
+
+---
+
+***Scale of curry restaurants, comparing to nyc
+***JP favors smaller establishments and has a strong tradition of family-run restaurants that specialize in one thing and do not hire much outside help
+
+Tokyo's Scale
+
+The New York Times reports that there are 160,000 restaurants in Tokyo (http://www.nytimes.com/2008/02/24/business/worldbusiness/24guide.html). Tabelog, the restaurant review site, contains 96,000 in its database (http://tabelog.com/tokyo/rstLst/RC/). Whichever count is used, there are far more restaurants in Tokyo than there are in the big cities it is often compared with.
+
+A functional reason for Tokyo's large number of restaurants is their average size. There are thousands of restaurants in the city with fewer than six seats. [tabelog random sample of seat count]
+
+Smaller restaurants tend to emphasize the connection between the chef and the customers. I have visited countless curry restaurants owned and operated by a husband and wife or mother and son who own the restaurant and cook and serve the food themselves for their entire working lives. In other cultures, when a family-run restaurant becomes more popular, the owners will often expand and grow their business by moving to a larger space, hiring staff, and/or expanding to a second location. In contrast, these Japanese family-run restaurants do not want to lose control of their mastery of the dish they serve nor the connection with each customer who comes in the door, so they stay small.
+
+Japanese drinking culture also helps explain Tokyo's large number of restaurants. It is more common in Japan for friends or coworkers to choose a restaurant for both eating and drinking for the night, rather than first choosing a place for dinner and later choosing a bar for drinks. Eating and drinking are not separate activites, and Japanese taverns called "izakaya" are places that emphasize food and alcohol equally. Both the New York Times and Tabelog are surely counting this type of establishment as a "restaurant."
+
+With the context of Tokyo's total count of restaurants, it actually seems like the presence of curry in Tokyo is sparse or uncommon, given that restaurants serving curry make up only 4% of all restaurants in the city. But I would not argue that the popularity of other types of restaurants indicates a lack of popularity of curry; instead, it reveals how much people in Tokyo enjoy both eating outside the home and having an expansive selection to choose from.
+
+It is hard to grasp what it's like to live in a city that has 96,000 restaurants to choose from, or even one with such a huge selection of one particular type of food. Here is one comparison: consider that New York Department of Health counts 24,300 restaurants in the five boroughs (including delis, take-out only, any establishment with a license to serve prepared food). So to understand how much choice there is in curry in Tokyo, imagine that one out of every six restaurants in New York City throughout the five boroughs serves curry, and that is how much selection someone in Tokyo has.
+
+
+Tokyo Metropolis is 13 million people (this is what's captured in the map, although "Greater Tokyo" encompasses 35 million people in a bigger area, which would have more curry), so is 4,000 restaurants serving curry a lot? To a certain extent, the scale of this city (and more specifically, curry in this city) can be understood through mapping curry restaurants.
+
+If you are more familiar with New York City, comparisons between the two large cities are possible but not perfect. The cities can be measured similarly in size and population. The population of Tokyo's 23 wards, the historical definition of Tokyo's city limits, is only half a million larger than that of New York City's five boroughs, and the five bouroughs are 26.5% larger in area than the 23 wards. 
+ 
+
+Curry can be compared to other retail categories in Tokyo as a rule of thumb for those familiar with the city. Tabelog, the restaurant review site which provides my count of restaurants serving curry in Tokyo, counts about 6,200 restaurants serving ramen in Tokyo. So for every two curry restaurants in Tokyo, there are three ramen restaurants (Note: this is a bit of a simplification. For one, some restaurants serve both curry and ramen, and this overlap is not considered here). Convenience stores, which seem like they're on every street corner of Tokyo, are slightly more numerous than curry restaurants, summing to 5,708 for the four major chains (2,351 7-Eleven locations, 1,954 FamilyMarts, 627 Sunkus (including Circle K), and approximately 776 Lawsons). This doesn't directly mean that on every corner that there's a ramen house and a convenience store, a curry house can usually be found next door, but these comparisons do provide perspective; there are *a lot* of curry houses in Tokyo.
+
+
+
+
+*get rid of this part?*
+The New York Times cites a count of 12,000 bodegas, NYC's small corner grocery store. So in recalling how frequently one walks a few blocks in New York City and encounters three bodegas along the way, one could imagine on a similar walk in Tokyo encountering one curry house and one or two convenience stores.
+
+
+
+https://nycfuture.org/research/publications/state-of-the-chains-2014
+http://www.nytimes.com/2015/08/04/nyregion/bodegas-declining-in-manhattan-as-rents-rise-and-chains-grow.html?_r=0
+https://en.wikipedia.org/wiki/Demographics_of_New_York_City
+https://en.wikipedia.org/wiki/Greater_Tokyo_Area
+http://www.sej.co.jp/company/en/n_stores.html
+http://www.family.co.jp/english/investor_relations/annual_report/pdf/15/e08a.pdf
+http://lawson.jp/en/about/business/
+http://www.circleksunkus.jp/company/info/results.html
+http://a816-restaurantinspection.nyc.gov/RestaurantInspection/SearchBrowse.do
+---
+
+***Portion sizes, customization, asking for specific amounts of rice, individual sets
+
+Eating just enough curry, alone
+
+Portion sizes in Japan are important. It is the chef's responsibility to serve a guest the exact amount of food required to nourish and fill their stomach. Thus, leaving uneaten food on the plate is uncommon because (in theory) it could be considered an insult to the chef's judgement or an indication that the flavor is unsatisfactory. It is quite common to see a customer scrape their plate clean of every grain of rice and drop of curry before they are truly finished with their meal.
+
+For big eaters as well as someone on a diet or not particularly hungry at mealtime, it is customary in Japan to order different amounts of food rather than leaving served food uneaten. Customers can simply specify for any noodle or rice-based dish that they want a small portion (小盛) or large portion (大盛) (or even extra large 特盛) when ordering their meal. Many restaurants will also indicate on their menu how many grams of rice or noodles are contained in each size portion of their meal, and some places will charge slightly different prices for the various sizes.
+
+With all of this specification, it may be obvious to mention that curry in Japan is served individually. In fact, most types of restaurants in Japan either serve food in individual sets or design the menu to be suitable for an individual customer. It is common and normal to visit almost any kind of restaurant in Japan alone.
+
+This idea of ordering and being served "just enough" food individually like this may seem strange to people from other cultures. 
+
+A chef or host in China's goal is to show that they can provide more than enough food as a token of their generosity (and to some extent, their wealth). So when eating at a restaurant in China, which almost always happens in a group, the host or oldest guest will deliberately order more food than could be comfortably consumed by the party, and no plate is scraped clean, as doing so may seem insulting or could lead to the host ordering another round of whatever was finished. I imagine that Chinese visiting Japan for a short time may be surprised by the difference in customs.
+
+Americans are used to large portions and I think typically do not place much emphasis on how much of the food they choose to eat. But in judging portions, Americans tend to assess the value of a meal, viewing favorably a restaurant that serves a large portion of food at a reasonable price. Restaurants in America are also much more generous with "filler" side dishes like french fries, chips, and dinner rolls that are often offered with unlimited refills. Thus, Americans who visit Japan often have the impression that portion sizes are much smaller both because the dish they ordered is likely objectively smaller and because the meal does not typically include a filler side to pad the stomach.
+
+
+---
+
+***Media: magazines as a strong part of Japanese media culture with narrow focuses and seasonal special editions
+
+Print magazines are highly influential in Japan, driving cultural trends and providing information as well as entertainment. And it is not hard to find a magazine with a feature on curry at any bookstore.
+
+Japanese magazines are different from what I'm familiar with in America. 
+
+American magazines all follow a similar format reminiscent of an american sitcom: you know how long it will be, which points will be funny or interesting, which will be emotionally touching, and which will provide new information, but if you like the subject matter you'll keep coming back for new episodes. Most American magazines focus on a single topic - maybe golf, Hollywood celebrities, fitness, style icons, or consumer technology - and seek customers that will trust that publication to keep them updated on that topic periodically. 
+
+Japanese magazines publish issues on a much wider range of topics. As far as I can tell, major magazine brands will represent and command an audience from a certain Japanese subculture or archetype and create any kind of content that the editors would deem appealing to this type. For example, a men's lifestyle magazine named Brutus has recently published an issue on seasonal fashion, one on the best coffee in Tokyo and New York, one London travel guide, and one issue on trendy kitchenware and furniture. Content from one publisher covering so many different topics still keeps the same type of target audience in mind. Minor magazine brands may release one-time issues on topics such as seasonally fashionable men's hair styles, popular seaside resorts in the Persian Gulf, and recipes from a certain region of Italy. If the American magazine industry is like a TV channel full of sitcoms, the Japanese magazine industry is like a contemporary collection of short films and documentaries, where you don't necessarily ever get a sequel to your favorite title but you can easily find another title from the same directory that you'll equally enjoy.
+
+Curry is not hard to find when browsing a bookstore's selection of magazine titles. I've enocountered cooking, food, lifestyle, and fashion magazines that have published a feature or entire issue about curry. Here are the issues I've looked at in detail so far:
+
+- Popeye, a lifestyle magazine with the tagline 'A Magazine for City Boys' and a decades-long publication history, published an issue last year called "Popeye's Tokyo Eat-Up Guide." Inside was an extensive guide to restaurants in the city. Curry is featured in the issue in a section discussing Jimbocho, a neighborhood north of the Imperial Palace with with the oldest and the highest concentration of curry restaurants in teh city. Additionally, Popeye ran a section with famous Tokyo chefs, asking them to name their favorite three dishes in the city, and curry was a favorite dish for many of them.
+
+- Non-No, a fashion magazine with both men's and women's editions, published an insert to its Summer 2015 issue that featured trendy curry and cold noodle houses in Tokyo. It is worth mentioning that Non-No has models and style icons on its staff rather than always featuring outside models or celebrities for the magazine's photographic content (this may be normal for fashion magazines in Japan). So for the special insert on curry and cold noodles, Non-No models were asked to recommend their favorite curry to eat for lunch.
+
+- 
+
+- 
+
+---
+
+Western perceptions of Japanese food
+http://www.japantimes.co.jp/life/2013/11/21/food/japans-love-for-curry-means-endless-variety/#.VlU3qaIhgeg

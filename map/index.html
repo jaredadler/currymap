@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0" />
+
+    <title>Tokyo Curry Map</title>
+
+
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7/leaflet.css" />
+    <link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.4/mapbox.css' rel='stylesheet' />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="src/jquery.fancybox.css" />
+	<link rel="stylesheet" href="//blueimp.github.io/Gallery/css/blueimp-gallery.min.css">
+	<link rel="stylesheet" href="src/bootstrap-image-gallery.min.css">
+
+    <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+    <script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.4/mapbox.js'></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	<script src="src/L.Control.Locate.min.js"></script>
+	<script src="src/fuse.min.js"></script>
+	<script type="text/javascript" src="src/instafeed.min.js"></script>
+	<script src="src/jquery.csv-0.71.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/iScroll/5.1.1/iscroll-min.js"></script>
+	<script src="//cdn.rawgit.com/ungki/bootstrap.dropdown/3.3.1/dropdown.min.js"></script>
+	<script src="src/jquery.fancybox.pack.js"></script>
+	<script src="src/jquery.fancybox.pack.js"></script>
+	<script src="//blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js"></script>
+	<script src="src/bootstrap-image-gallery.min.js"></script>
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+    <style type="text/css">
+    html, body {
+        height:100vh;
+    }
+	#map {
+       height: 75vh;
+    }
+	.legend {
+		color: #555;
+		padding: 6px 8px;
+		background: white;
+		background: rgba(255, 255, 255, 0.8);
+		box-shadow: 0 0 15px rgba(0,0,0,0.2);
+		border-radius: 5px;
+	}
+	.legend i {
+		width: 14px;
+		height: 14px;
+		float: left;
+		margin-right: 8px;
+		vertical-align: center;
+		opacity: 0.7;
+	}
+	.legendHighlight {
+		color: #555;
+		padding: 6px 8px;
+		background: white;
+		background: rgba(255, 255, 255, 0.8);
+		box-shadow: 0 0 15px rgba(0,0,0,0.2);
+		border-radius: 5px;
+	}
+	.legendHighlight i {
+		width: 14px;
+		height: 14px;
+		float: left;
+		margin-right: 8px;
+		vertical-align: center;
+		opacity: 0.7;
+	}
+	.my-btn {
+		// .button-variant(@btn-primary-color; @btn-primary-bg; @btn-primary-border);
+		.button-variant(red; white; blue);
+	}
+	.hide-radio>.btn-group>.btn input[type=radio] {
+    position: absolute;
+    clip: rect(0,0,0,0);
+    pointer-events: none;
+	}
+	.about-btn {
+	padding-top: 12px;
+	}
+    </style>
+
+</head>
+
+<body>
+	<nav class="navbar navbar-default">
+	  <div class="container-fluid">
+		<div class="navbar-header">
+		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		  </button>
+		  <a class="navbar-brand" href="#">Curry in Tokyo</a>
+		</div>
+		<div class="collapse navbar-collapse" id="myNavbar">
+		  <ul class="nav navbar-nav">
+			<li><a href="http://kare.tokyo/">Story</a></li>
+      <li class="active"><a href="http://kare.tokyo/map/">Full Map</a></li>
+		  </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="http://twitter.com/jaredadler"><i class="fa fa-lg fa-twitter"></i></a></li>
+          </ul>
+		</div>
+	  </div>
+	</nav>
+
+	<div class="container-fluid">
+
+
+		<div class="row">
+			<div class="col-md-4">
+				<div class="panel-group" id="accordion">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h4 class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordion" href="#collapse1" class="btn-block"><i class="fa fa-cog"></i></a>
+							</h4>
+						</div>
+						<div id="collapse1" class="panel-collapse collapse">
+							<div class="panel-body">
+								<div class="tabbable">
+									<ul class="nav nav-tabs">
+										<li class="active"><a data-toggle="tab" href="#topcurry">Top Curry</i></a></li>
+										<li><a data-toggle="tab" href="#ctypes">Types</a></li>
+										<li><a data-toggle="tab" href="#locatest">Locate Station</a></li>
+									</ul>
+									<div class="tab-content">
+										<div id="topcurry" class="tab-pane fade in active">
+											<h4>Show Top Curry Picks From:</h4>
+											<div class="btn-group-vertical-block" data-toggle="buttons">
+											<label class="btn btn-default">
+													<input type="radio" autocomplete="off" value="" id="top_tabelog"> Tabelog Reviews
+												</label>
+											<label class="btn btn-default">
+													<input type="radio" autocomplete="off" value="" id="popeye"> Popeye Tokyo Eat-Up Guide
+												</label>
+                                            <label class="btn btn-default">
+													<input type="radio" autocomplete="off" value="" id="nonno"> Non-No Summer 2015 Curry Guide
+												</label>
+                                            <label class="btn btn-default">
+													<input type="radio" autocomplete="off" value="" id="currymag"> Curry Enthusiast Magazine 
+												</label>
+											<label class="btn btn-default">
+													<input type="radio" autocomplete="off" value=""  id="my_rec"> My Recommendations
+												</label>
+											<label class="btn btn-default active">
+													<input type="radio" autocomplete="off" value="" id="highlight_none"> No Top Picks (Color by Curry Type)
+												</label>
+											</div>
+											<div class="about-btn">
+											<button type="button" class="btn btn-default btn-link" data-toggle="modal" data-target="#myModal">About Top Picks</button>
+											</div>
+										</div>
+										<div id="ctypes" class="tab-pane fade">
+											<h4>Show/Hide Curry</h4>
+											<div class="btn-group-vertical-block" data-toggle="buttons">
+												<label class="btn btn-default active">
+													<input type="checkbox" autocomplete="off" value="tokyocurry_c1" id="c1" checked> Curry Udon カレーうどん
+												</label>
+												<label class="btn btn-default active">
+													<input type="checkbox" autocomplete="off" value="tokyocurry_c2"  id="c2" checked> European Curry 欧風カレー
+												</label>
+												<label class="btn btn-default active">
+													<input type="checkbox" autocomplete="off" value="tokyocurry_c3"  id="c3" checked> Soup Curry スープカレー
+												</label>
+												<label class="btn btn-default active">
+													<input type="checkbox" autocomplete="off" value="tokyocurry_c4" id="c4" checked> Pakistani Curry パキスタンカレー
+												</label>
+												<label class="btn btn-default active">
+													<input type="checkbox" autocomplete="off" value="tokyocurry_c5" id="c5" checked> Nepali Curry ネパールカレー
+												</label>
+												<label class="btn btn-default active">
+													<input type="checkbox" autocomplete="off"  value="tokyocurry_c6" id="c6" checked> Thai Curry タイカレー
+												</label>
+												<label class="btn btn-default active">
+													<input type="checkbox" autocomplete="off"  value="tokyocurry_c7" id="c7" checked> Indian Curry インドカレー
+												</label>
+												<label class="btn btn-default active">
+													<input type="checkbox" autocomplete="off" value="tokyocurry_c8" id="c8" checked> Japanese Curry Rice カレーライス
+												</label>
+												<label class="btn btn-default active">
+													<input type="checkbox" autocomplete="off" value="tokyocurry_c9" id="c9" checked> Other Curry
+												</label>
+												<label class="btn btn-default">
+													<input type="checkbox" autocomplete="off" value="tokyocurry_c10" id="c10"> Curry Chain (Coco, Matsuya, etc.)
+												</label>
+											</div>
+										</div>
+										<div id="locatest" class="tab-pane fade">
+											<h4>Search Metro Stations</h4>
+											<div class="form-group">
+												<input type="text" class="form-control" id="locateinput">
+											</div>
+											<div id="locateinputtext">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h4 class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordion" href="#collapse2"  class="btn-block"><div id="titlespace"></div></a>
+							</h4>
+						</div>
+						<div id="collapse2" class="panel-collapse collapse in">
+							<div class="panel-body">
+								<div class="tabbable">
+									<ul class="nav nav-tabs">
+										<li class="active"><a data-toggle="tab" href="#home"><i class="fa fa-info fa-lg"></i></a></li>
+									</ul>
+									<div class="tab-content">
+										<div id="home" class="tab-pane fade in active">
+											<h4>Location Info</h4>
+											<div id="infocontrol">
+											</div>
+											<div id="photos" style="margin: 0 0 0px">
+											<h4>Instagram Photos from Location</h4>
+											<div id="instafeed" class="row" style="margin: 0 0 30px">
+												<div class="col-xs-4" style="margin-bottom:30px;">
+													<img src="img/curryrice_ph.jpg" class='img-responsive'/>
+												</div>
+												<div class="col-xs-4" style="margin-bottom:30px;">
+													<img src="img/curryrice_ph.jpg" class='img-responsive'/>
+												</div>
+												<div class="col-xs-4" style="margin-bottom:30px;">
+													<img src="img/curryrice_ph.jpg" class='img-responsive'/>
+												</div>
+											</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-8" style="margin: 0 0 30px">
+				<div id="map" href="#mappane" class="mapwide"></div>
+			</div>
+			</div>
+
+			<div class="modal fade" id="myModal" role="dialog">
+				<div class="modal-dialog">
+
+				  <!-- Modal content-->
+					<div class="modal-content {padding: 8px}">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+							<h4 class="modal-title">Top Curry Picks</h4>
+						</div>
+						<div class="modal-body row">
+								<div class='col-md-4'>
+								<h4>Tabelog Reviews</h4>
+								<img src='img/tabelog.png' class='img-responsive' />
+								<p>Tabelog.com is the definitive user review site for restaurants, bars, and cafes country-wide. Top picks from Tabelog are places with both reviews scores and review counts in the top 20% for the city.</p>
+								</div>
+								<div class='col-md-4'>
+									<h4>Popeye Tokyo Eat-Up Guide</h4>
+									<img src='img/popeye_edited.jpg' class='img-responsive'/>
+									<p>A <a href='http://magazineworld.jp/books/paper/8969/'>Popeye (ポパイ) magazine special issue</a> on food in Tokyo. Top picks include recommendations from the magazine editors as well as top picks from dozens of local chefs in the issue's "Best Three Dishes" section.</p>
+								</div>
+								<div class='col-md-4'>
+									<h4>My Recommendations</h4>
+									<img src='img/mokubaza.jpg' class='img-responsive'/>
+									<p>I've eaten curry at only about 50 of the places in the dataset. My recommendations are favorites out of those I've personally tried. Most of them are on the spicier side.</p>
+								</div>
+						</div>
+						<div class="modal-footer">
+						  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						</div>
+
+
+				</div>
+			</div>
+
+
+
+	</div>
+	
+<div id="blueimp-gallery" class="blueimp-gallery">
+    <!-- The container for the modal slides -->
+    <div class="slides"></div>
+    <!-- Controls for the borderless lightbox -->
+    <p class="title"></p>
+    <a class="prev">‹</a>
+    <a class="next">›</a>
+    <a class="close">×</a>
+    <a class="play-pause"></a>
+    <ol class="indicator"></ol>
+    <!-- The modal dialog, which will be used to wrap the lightbox content -->
+    <div class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" aria-hidden="true">&times;</button>
+                    <p><i class="fa fa-instagram fa-lg"></i></p>
+                </div>
+                <div class="modal-body next" style="margin 0 0 30px;"></div>
+								<p class="modal-title well" id="datadescription" style="margin 30px 0 30px;"></p>
+                <div class="modal-footer">
+										
+                    <button type="button" class="btn btn-default pull-left prev">
+                        <i class="glyphicon glyphicon-chevron-left"></i>
+                        Previous
+                    </button>
+                    <button type="button" class="btn btn-primary next">
+                        Next
+                        <i class="glyphicon glyphicon-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <script type="text/javascript" src="main.js"></script>
+
+
+    </body>
+
+    </html>
